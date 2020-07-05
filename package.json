@@ -1,0 +1,25 @@
+{
+  "name": "energi_redirect_proposal",
+  "version": "1.0.0",
+  "main": "index.js",
+  "repository": "https://github.com/ogwurujohnson/energi_redirect_proposal.git",
+  "author": "ogwurujohnson <ogwurujohnson@gmail.com>",
+  "license": "Proprietary",
+  "dependencies": {
+    "@energi/web3-ext": "^0.1.5",
+    "cors": "^2.8.5",
+    "cron": "^1.8.2",
+    "dotenv": "^8.2.0",
+    "express": "^4.17.1",
+    "helmet": "^3.23.3",
+    "node-fetch": "^2.6.0",
+    "web3": "^1.2.9"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.4"
+  },
+  "scripts": {
+    "dev": "nodemon index.js",
+    "start": "node index.js"
+  }
+}
