@@ -21,9 +21,18 @@ app.get('/', (req, res) => {
 });
 
 app.post('/receive', async (req, res) => {
-  const { body } = req;
-  processRequest(body.content);
-  res.status(201).json({success: true})
+  //check if its coming from nexus
+  const {origin} = req.headers;
+  console.log(origin)
+  if (origin === 'https://nexus.energi.network' || origin === 'https://test3.energi.network' || origin === 'http://localhost:8000' ) {
+    const { body } = req;
+    processRequest(body.content);
+    res.status(201).json({success: true})  
+  } else {
+    res.status(403).json({error: 'unauthorized request'})
+  }
+  
+  
 });
 
 app.listen(port, () => {

@@ -4,7 +4,15 @@ const CronJob = require('cron').CronJob;
 const fetch = require('node-fetch');
 
 const Web3Service = require('./web3');
-const discordUrl = process.env.DISCORD_URL;
+const nodeEnv = process.env.NODE_ENV;
+
+let discordUrl;
+if (nodeEnv === 'production') {
+  discordUrl = process.env.DISCORD_URL;
+} else {
+  discordUrl = process.env.TEST_DISCORD_URL;
+}
+
 
 /**
  * TODO: Make sure to make a request to this server from nexus and test the flows
@@ -55,7 +63,7 @@ function markAsDone(uuid) {
 }
 
 // setup cron job to run every minute
-const cron = new CronJob('* * * * * *', async () => {
+const cron = new CronJob('* * * * *', async () => {
   const preSavedProposals = fetchProposals();
   const blockchainProposals = await fetchBlockchainProposals();
 
