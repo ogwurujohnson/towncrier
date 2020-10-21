@@ -4,7 +4,7 @@
   "main": "index.js",
   "repository": "https://github.com/ogwurujohnson/energi_redirect_proposal.git",
   "author": "ogwurujohnson <ogwurujohnson@gmail.com>",
-  "license": "Proprietary",
+  "license": "MIT",
   "dependencies": {
     "@energi/web3-ext": "^0.1.5",
     "cors": "^2.8.5",
