@@ -1,1 +1,1 @@
-# energi_redirect_proposal
+# Energi Redirect Proposal Notification
