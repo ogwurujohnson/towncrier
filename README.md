@@ -1,4 +1,4 @@
-# Energi Redirect Proposal Notification
+# Town Crier (Energi Decentralised Proposal Notification)
 
 ## Getting started
 
